@@ -60,7 +60,7 @@
                             </li> -->
 
                             <li class="nav-item">
-                                <router-link to="/cart" class="nav-link" href="#">購物車</router-link>
+                                <router-link to="/cart" class="nav-link" href="#">購物車123</router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link to="/login" class="nav-link" href="#">登入</router-link>
