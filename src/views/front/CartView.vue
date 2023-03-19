@@ -62,8 +62,6 @@
                 </tr>
               </tfoot>
     </table>
-
-    
 </template>
 
 <script>
