@@ -29,12 +29,11 @@
         </section>
 
         <!--精選文章 -->
-        <section class="section3">
+        <!-- <section class="section3">
             <div class="container d-flex flex-column align-items-center ">
                 <img src="" alt="" width="70" class="my-2">
 
                 <h3 class="my-2 text-title">精選文章</h3>
-                <!-- Swiper -->
                 <div class="swiper mySwiper my-4">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide d-flex flex-column" style="flex-direction: column;">
@@ -78,7 +77,7 @@
                 <a class="btn-style1 btn-color1 my-2 d-inline-block">了解更多</a>
             </div>
 
-        </section>
+        </section> -->
 
         <!--熱門商品 -->
         <section class="section4">
@@ -88,142 +87,65 @@
                 <h3 class="my-2 text-title">熱門商品</h3>
 
                 <!-- Swiper -->
-                <div class="swiper mySwiper my-4">
-                    <div class="swiper-wrapper"  >
-
-                        <div class="swiper-slide d-flex flex-column" style="flex-direction: column;" v-for="item in products" :key="item.id">
-                            <img src="" alt="">
-                            <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a>
-                            <a href="" class="icon-cycle2"><img src="" alt="cart"
-                                    class="icon-style2 "></a>
+                <div class="my-4">
+                    <div class="row">
+                        <div class="swiper-slide d-flex flex-column col-4" style="flex-direction: column;" v-for="item in products" :key="item.id">
+                            <img :src="item.imageUrl" alt="">
+                            <!-- <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a> -->
+                            <a class="icon-cycle2" @click="addToCart(item.id)"><img src="" alt="cart"
+                                    class="icon-style2 " ></a>
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">
                                     {{item.title}}</h4>
                                 <p style="text-align: left;">NT${{item.price}}</p>
+                                <RouterLink :to="`/product/${item.id}`" class="btn btn-primary m-2">詳細資訊</RouterLink>
                             </div>
                         </div>
-
-                        <!-- <div class="swiper-slide d-flex flex-column" style="flex-direction: column;">
-                            <img src="./img/pexels-surene-palvie-2070676.jpg" alt="">
-                            <a href="" class="icon-cycle"><img src="./img/like.png" alt="like" class="icon-style"></a>
-                            <a href="" class="icon-cycle2"><img src="./img/shopping-cart.png" alt="cart"
-                                    class="icon-style2 "></a>
-                            <div class="py-4">
-                                <h4 style="text-align: left;" class="title-setting">
-                                    復古撞色拼貼手提包</h4>
-                                <p style="text-align: left;">NT$300</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide d-flex flex-column" style="flex-direction: column;">
-
-                            <img src="./img/pexels-surene-palvie-2070676.jpg" alt="">
-                            <a href="" class="icon-cycle"><img src="./img/like.png" alt="like" class="icon-style"></a>
-                            <a href="" class="icon-cycle2"><img src="./img/shopping-cart.png" alt="cart"
-                                    class="icon-style2 "></a>
-                            <div class="py-4">
-                                <h4 style="text-align: left;" class="title-setting">
-                                    復古撞色拼貼手提包</h4>
-                                <p style="text-align: left;">NT$300</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide d-flex flex-column" style="flex-direction: column;">
-
-                            <img src="./img/pexels-surene-palvie-2070676.jpg" alt="">
-                            <a href="" class="icon-cycle"><img src="./img/like.png" alt="like" class="icon-style"></a>
-                            <a href="" class="icon-cycle2"><img src="./img/shopping-cart.png" alt="cart"
-                                    class="icon-style2 "></a>
-                            <div class="py-4">
-                                <h4 style="text-align: left;" class="title-setting">
-                                    復古撞色拼貼手提包</h4>
-                                <p style="text-align: left;">NT$300</p>
-                            </div>
-                        </div> -->
-
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
                 <a class="btn-style1 btn-color2 my-2">了解更多</a>
             </div>
-
         </section>
-
-        <!-- footer -->
-        <footer>
-            <div class="py-5 container">
-                <div class="row">
-                    <div class="col-2">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-2">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-2">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-4 offset-1">
-                        <form>
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Monthly digest of whats new and exciting from us.</p>
-                            <div class="d-flex w-100 gap-2">
-                                <label for="newsletter1" class="visually-hidden">Email address</label>
-                                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                                <button class="btn btn-primary" type="button">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-between py-4 my-4 border-top">
-                    <p>© 2022 Company, Inc. All rights reserved.</p>
-                    <ul class="list-unstyled d-flex">
-                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                    <use xlink:href="#twitter"></use>
-                                </svg></a></li>
-                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                    <use xlink:href="#instagram"></use>
-                                </svg></a></li>
-                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                    <use xlink:href="#facebook"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
+const { VITE_API, VITE_PATH } = import.meta.env
 
 export default {
+  data () {
+    return {
+      products: [],
+      cart: {}
+    }
+  },
+  methods: {
+    getProducts () {
+      this.$http.get(`${VITE_API}/api/${VITE_PATH}/products`)
+        .then((res) => {
+          console.log(res)
+          this.products = res.data.products
+        })
+    },
+    addToCart (id) {
+      const data = {
+        product_id: id,
+        qty: 1
+      }
+      this.$http.post(`${VITE_API}/api/${VITE_PATH}/cart`, { data })
+        .then((res) => {
+          console.log('購物車', res)
+          this.cart = res.data
+        })
+    }
+  },
   components: {
+    RouterLink
+  },
+  mounted () {
+    this.getProducts()
   }
+
 }
 </script>
 

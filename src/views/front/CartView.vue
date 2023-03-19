@@ -61,7 +61,9 @@
                   <td class="text-end text-success">{{ cart.final_total }}</td>
                 </tr>
               </tfoot>
-            </table>
+    </table>
+
+    
 </template>
 
 <script>
