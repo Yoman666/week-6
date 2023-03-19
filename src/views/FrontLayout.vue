@@ -18,7 +18,7 @@
                         <a class="navbar-brand" href="#">
                             <img src="" alt="" width="30" height="24"
                                 class="d-inline-block align-text-top">
-                            笨NaNa
+                            笨NaNa123
                         </a>
                     </div>
                 </div>

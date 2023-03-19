@@ -19,8 +19,10 @@ git commit -m 'deploy'
 
 # if you are deploying to https://yoman666.github.io
 # git push -f git@github.com:yoman666/yoman666.github.io.git main
+git push -f https://github.com/Yoman666/week-6.git main
 
 # if you are deploying to https://yoman666.github.io/week-6
 git push -f https://github.com/Yoman666/week-6.git main:gh-pages
+
 
 cd -
