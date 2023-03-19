@@ -26,7 +26,7 @@
  <!--品牌理念 -->
  <section class="products-section01">
             <div class="container d-flex flex-column align-items-center ">
-                <img src="./img/banana.png" alt="" width="70" class="my-2">
+                <img src="" alt="" width="70" class="my-2">
                 <h3 class="my-2 text-title">商品</h3>
                 <!-- <ul class="center-row m-4 p-0">
                     <li class="center mx-2">
