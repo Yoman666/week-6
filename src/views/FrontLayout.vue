@@ -16,7 +16,7 @@
                 <div class="container-fluid">
                     <div>
                         <a class="navbar-brand" href="#">
-                            <img src="./img/banana.png" alt="" width="30" height="24"
+                            <img src="" alt="" width="30" height="24"
                                 class="d-inline-block align-text-top">
                             笨NaNa
                         </a>
