@@ -19,7 +19,7 @@
         <!--品牌理念 -->
         <section class="section2">
             <div class="container d-flex flex-column align-items-center ">
-                <img src="./img/banana.png" alt="" width="70" class="my-2">
+                <img src="" alt="" width="70" class="my-2">
 
                 <h3 class="my-2 text-title">笨NaNa 品牌理念</h3>
                 <p class="text-container my-4">
@@ -31,14 +31,14 @@
         <!--精選文章 -->
         <section class="section3">
             <div class="container d-flex flex-column align-items-center ">
-                <img src="./img/banana.png" alt="" width="70" class="my-2">
+                <img src="" alt="" width="70" class="my-2">
 
                 <h3 class="my-2 text-title">精選文章</h3>
                 <!-- Swiper -->
                 <div class="swiper mySwiper my-4">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide d-flex flex-column" style="flex-direction: column;">
-                            <img src="./img/pexels-surene-palvie-2070676.jpg" alt="">
+                            <img src="" alt="">
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">
                                     想學編織卻不知如何準備嗎？新手懶人新手懶人新手懶人新手懶人新手懶人新手懶人新手懶人新手懶人新手懶人新手懶人新手懶人新手懶人</h4>
@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="swiper-slide d-flex flex-column" style="flex-direction: column;">
-                            <img src="./img/pexels-surene-palvie-2070676.jpg" alt="">
+                            <img src="" alt="">
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">想學編織卻不知如何準備嗎？新手懶人</h4>
                                 <p style="text-align: left;">2023.03.03</p>
@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="swiper-slide d-flex flex-column" style="flex-direction: column;">
-                            <img src="./img/pexels-surene-palvie-2070676.jpg" alt="">
+                            <img src="" alt="">
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">想學編織卻不知如何準備嗎？新手懶人</h4>
                                 <p style="text-align: left;">2023.03.03</p>
@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="swiper-slide d-flex flex-column" style="flex-direction: column;">
-                            <img src="./img/pexels-surene-palvie-2070676.jpg" alt="">
+                            <img src="" alt="">
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">想學編織卻不知如何準備嗎？新手懶人</h4>
                                 <p style="text-align: left;">2023.03.03</p>
@@ -83,7 +83,7 @@
         <!--熱門商品 -->
         <section class="section4">
             <div class="container d-flex flex-column align-items-center">
-                <img src="./img/banana.png" alt="" width="70" class="my-2">
+                <img src="" alt="" width="70" class="my-2">
 
                 <h3 class="my-2 text-title">熱門商品</h3>
 
@@ -92,9 +92,9 @@
                     <div class="swiper-wrapper"  >
 
                         <div class="swiper-slide d-flex flex-column" style="flex-direction: column;" v-for="item in products" :key="item.id">
-                            <img src="./img/pexels-surene-palvie-2070676.jpg" alt="">
-                            <a href="" class="icon-cycle"><img src="./img/like.png" alt="like" class="icon-style"></a>
-                            <a href="" class="icon-cycle2"><img src="./img/shopping-cart.png" alt="cart"
+                            <img src="" alt="">
+                            <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a>
+                            <a href="" class="icon-cycle2"><img src="" alt="cart"
                                     class="icon-style2 "></a>
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">
