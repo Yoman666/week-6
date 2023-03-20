@@ -1,6 +1,6 @@
 <template>
-      <!-- banner -->
-      <section class="section1">
+        <!-- banner -->
+        <section class="section1">
             <div class="container">
                 <div class="row">
                     <div class="col-6">
@@ -90,7 +90,8 @@
                 <div class="my-4">
                     <div class="row">
                         <div class="swiper-slide d-flex flex-column col-4" style="flex-direction: column;" v-for="item in products" :key="item.id">
-                            <img :src="item.imageUrl" alt="">
+                            <div v-if="item.id=='-NMreZGQ3edXuWhdduY_'" style="width:100%">
+                                <img :src="item.imageUrl" alt="">
                             <!-- <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a> -->
                             <a class="icon-cycle2" @click="addToCart(item.id)"><img src="" alt="cart"
                                     class="icon-style2 " ></a>
@@ -100,10 +101,35 @@
                                 <p style="text-align: left;">NT${{item.price}}</p>
                                 <RouterLink :to="`/product/${item.id}`" class="btn btn-primary m-2">詳細資訊</RouterLink>
                             </div>
+                            </div>
+                            <div v-if="item.id=='-NMrERSeaJkVD0FYF6op'" style="width:100%">
+                                <img :src="item.imageUrl" alt="">
+                            <!-- <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a> -->
+                            <a class="icon-cycle2" @click="addToCart(item.id)"><img src="" alt="cart"
+                                    class="icon-style2 " ></a>
+                            <div class="py-4">
+                                <h4 style="text-align: left;" class="title-setting">
+                                    {{item.title}}</h4>
+                                <p style="text-align: left;">NT${{item.price}}</p>
+                                <RouterLink :to="`/product/${item.id}`" class="btn btn-primary m-2">詳細資訊</RouterLink>
+                            </div>
+                            </div>
+                            <div v-if="item.id=='-NMmBNejVDUkOD464N1y'" style="width:100%">
+                                <img :src="item.imageUrl" alt="">
+                            <!-- <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a> -->
+                            <a class="icon-cycle2" @click="addToCart(item.id)"><img src="" alt="cart"
+                                    class="icon-style2 " ></a>
+                            <div class="py-4">
+                                <h4 style="text-align: left;" class="title-setting">
+                                    {{item.title}}</h4>
+                                <p style="text-align: left;">NT${{item.price}}</p>
+                                <RouterLink :to="`/product/${item.id}`" class="btn btn-primary m-2">詳細資訊</RouterLink>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <a class="btn-style1 btn-color2 my-2">了解更多</a>
+                <router-link to="/products" class="btn-style1 btn-color2 my-2">了解更多</router-link>
             </div>
         </section>
 </template>
