@@ -67,8 +67,7 @@
                 <div class="swiper-slide d-flex flex-column col-4" style="flex-direction: column;" v-for="item in products" :key="item.id">
                     <img :src="item.imageUrl" alt="">
                     <!-- <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a> -->
-                    <a class="icon-cycle2" @click="addToCart(item.id)"><img src="" alt="cart"
-                            class="icon-style2 " ></a>
+                    <a class="icon-cycle2 fa fa-shopping-cart icon-style2" @click="addToCart(item.id)"></a>
                     <div class="py-4">
                         <h4 style="text-align: left;" class="title-setting">
                             {{item.title}}</h4>

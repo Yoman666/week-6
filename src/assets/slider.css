@@ -68,8 +68,8 @@ a .icon-style2 {
 }
 .icon-cycle2 {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 20px;
     background-color: #ffffff60;
     padding: 10px;
     border-radius: 50px;

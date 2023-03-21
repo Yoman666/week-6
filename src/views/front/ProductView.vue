@@ -10,29 +10,18 @@
                   <p class="text-container my-4">{{ product.description }}
                   </p>
                   <p class="product-price my-4">NT${{product.price}}</p>
-                  <div class="row ">
-                      <div class="col-6 center my-4">
-                          <div class="input-group my-3 bg-light rounded">
-                              <div class="input-group-prepend">
-                                  <button class="btn btn-outline-dark border-0 py-2" type="button"
-                                      id="button-addon1">
-                                      <i class="fas fa-minus">-</i>
-                                  </button>
-                              </div>
-                              <input type="text"
-                                  class="form-control border-0 text-center my-auto shadow-none bg-light"
-                                  placeholder="" aria-label="Example text with button addon"
-                                  aria-describedby="button-addon1" value="1">
-                              <div class="input-group-append">
-                                  <button class="btn btn-outline-dark border-0 py-2" type="button"
-                                      id="button-addon2">
-                                      <i class="fas fa-plus">+</i>
-                                  </button>
-                              </div>
+                  <div class="row " >
+                      <!-- <div class="col-6 center my-4" >
+                          <div class="input-group my-3 bg-light rounded" >
+                              <select name="" id="" class="form-control" v-model="cart.carts.qty" @change="updateCarts(product)">
+                            <option :value="i" v-for="i in 20" :key="i + '123'">
+                              {{i}}
+                            </option>
+                          </select>
                           </div>
-                      </div>
-                      <div class="col-6 center">
-                          <a href="./checkout.html" class="text-nowrap btn btn-dark w-100 py-2 lable-text">加入購物車</a>
+                      </div> -->
+                      <div class="col-6 center" >
+                          <a class="text-nowrap btn btn-dark w-100 py-2 lable-text" @click="addToCart(product.id)">加入購物車</a>
                       </div>
                   </div>
 
@@ -113,10 +102,37 @@ const { VITE_API, VITE_PATH } = import.meta.env
 export default {
   data () {
     return {
-      product: {}
+      product: {},
+      cart: {}
     }
   },
   methods: {
+    getCarts () {
+      const url = `${VITE_API}/api/${VITE_PATH}/cart`
+      this.$http.get(url).then((res) => {
+        console.log('取得購物車表', res.data)
+        // 注意資料取的來源要正確
+        this.cart = res.data.data
+      })
+    },
+    updateCarts (item) {
+      const data = {
+        // product_id: item.product.id,
+        // qty: item.qty
+        product_id: item.id,
+        qty: item.qty
+      }
+
+      const url = `${VITE_API}/api/${VITE_PATH}/cart/${item.id}`
+      this.$http.put(url, { data }).then((res) => {
+        this.loadingStatus.loadingItem = ''
+        console.log('更新購物車', res.data)
+        this.getCarts()
+      }).catch((err) => {
+        alert(err.response.data.message)
+        this.loadingStatus.loadingItem = ''
+      })
+    },
     getProduct () {
       console.log('id位置', this.$route.params)
       const { id } = this.$route.params
@@ -125,10 +141,22 @@ export default {
           console.log('單一產品資料', res)
           this.product = res.data.product
         })
+    },
+    addToCart (id) {
+      const data = {
+        product_id: id,
+        qty: 1
+      }
+      this.$http.post(`${VITE_API}/api/${VITE_PATH}/cart`, { data })
+        .then((res) => {
+          console.log('購物車', res)
+          this.cart = res.data
+        })
     }
   },
   mounted () {
     this.getProduct()
+    this.getCarts()
   }
 }
 </script>

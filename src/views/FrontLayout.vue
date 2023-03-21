@@ -16,9 +16,9 @@
                 <div class="container-fluid">
                     <div>
                         <a class="navbar-brand" href="#">
-                            <img src="" alt="" width="30" height="24"
+                            <img src="https://cdn-icons-png.flaticon.com/128/2083/2083677.png" alt="" width="30" height="24"
                                 class="d-inline-block align-text-top">
-                            笨NaNa123
+                            笨NaNa手做坊
                         </a>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                             </li> -->
 
                             <li class="nav-item dropdown">
-                                <router-link to="/products" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <router-link to="/products" class="nav-link" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     產品
                                 </router-link>
@@ -82,42 +82,19 @@
             <div class="py-5 container">
                 <div class="row">
                     <div class="col-2">
-                        <h5>Section</h5>
+                        <h5>香蕉笨nana</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-2">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-2">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                            <li class="nav-item mb-2"><router-link to="/" href="#" class="nav-link p-0 text-muted">Home</router-link></li>
+                            <li class="nav-item mb-2"><router-link to="/products" href="#" class="nav-link p-0 text-muted">Products</router-link></li>
+                            <li class="nav-item mb-2"><router-link to="/cart" href="#" class="nav-link p-0 text-muted">Cart</router-link></li>
+                            <li class="nav-item mb-2"><router-link to="/login" href="#" class="nav-link p-0 text-muted">Login</router-link></li>
                         </ul>
                     </div>
 
                     <div class="col-4 offset-1">
                         <form>
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Monthly digest of whats new and exciting from us.</p>
+                            <h5>訂閱</h5>
+                            <p>歡迎訂閱，不要錯過新品喔!</p>
                             <div class="d-flex w-100 gap-2">
                                 <label for="newsletter1" class="visually-hidden">Email address</label>
                                 <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
@@ -128,7 +105,7 @@
                 </div>
 
                 <div class="d-flex justify-content-between py-4 my-4 border-top">
-                    <p>© 2022 Company, Inc. All rights reserved.</p>
+                    <p>© 2023 六角冬季vue直播班. 作品及練習</p>
                     <ul class="list-unstyled d-flex">
                         <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
                                     <use xlink:href="#twitter"></use>

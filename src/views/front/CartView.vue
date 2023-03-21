@@ -63,7 +63,7 @@
 
     <section>
       <div class="container">
-          <router-link to="/cart" href="cart03.html" class="btn-style1 btn-color1 text-center my-4 d-inline-block" style="float: right;">GO TO 填寫資料</router-link>
+          <router-link to="/cart2"  class="btn-style1 btn-color1 text-center my-4 d-inline-block" style="float: right;">GO TO 填寫資料</router-link>
       </div>
     </section>
 

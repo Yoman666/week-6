@@ -10,7 +10,7 @@
                             <!-- <button class="btn btn-outline-success text-nowrap" type="submit">找尋</button> -->
                         </form>
                     </div>
-                    <div class="col-6">img</div>
+                    <div class="col-6"></div>
                 </div>
             </div>
 
@@ -93,8 +93,8 @@
                             <div v-if="item.id=='-NMreZGQ3edXuWhdduY_'" style="width:100%">
                                 <img :src="item.imageUrl" alt="">
                             <!-- <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a> -->
-                            <a class="icon-cycle2" @click="addToCart(item.id)"><img src="" alt="cart"
-                                    class="icon-style2 " ></a>
+                            <a class="icon-cycle2 fa fa-shopping-cart icon-style2" @click="addToCart(item.id)"></a>
+
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">
                                     {{item.title}}</h4>
@@ -105,8 +105,7 @@
                             <div v-if="item.id=='-NMrERSeaJkVD0FYF6op'" style="width:100%">
                                 <img :src="item.imageUrl" alt="">
                             <!-- <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a> -->
-                            <a class="icon-cycle2" @click="addToCart(item.id)"><img src="" alt="cart"
-                                    class="icon-style2 " ></a>
+                            <a class="icon-cycle2 fa fa-shopping-cart icon-style2" @click="addToCart(item.id)"></a>
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">
                                     {{item.title}}</h4>
@@ -117,8 +116,7 @@
                             <div v-if="item.id=='-NMmBNejVDUkOD464N1y'" style="width:100%">
                                 <img :src="item.imageUrl" alt="">
                             <!-- <a href="" class="icon-cycle"><img src="" alt="like" class="icon-style"></a> -->
-                            <a class="icon-cycle2" @click="addToCart(item.id)"><img src="" alt="cart"
-                                    class="icon-style2 " ></a>
+                            <a class="icon-cycle2 fa fa-shopping-cart icon-style2" @click="addToCart(item.id)"></a>
                             <div class="py-4">
                                 <h4 style="text-align: left;" class="title-setting">
                                     {{item.title}}</h4>
